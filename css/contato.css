@@ -1,0 +1,116 @@
+.contato {
+  background: #000;
+}
+.contato .container {
+  grid-template-columns: 1fr 1fr;
+  gap: 150px;
+  position: relative;
+}
+.contato .container::before {
+  content: "";
+  display: block;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  z-index: 1;
+  width: 130px;
+  height: 100px;
+  top: -55px;
+  left: 21px;
+}
+.contato .sub-texto {
+  color: #ccc;
+  padding: 0 64px 0 0;
+  align-self: center;
+}
+.email {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.7;
+}
+.lista-email {
+  justify-self: center;
+}
+.direitos {
+  color: #8f8f8f;
+  font-size: 1.125rem;
+}
+/* ------------------------------------------1000 */
+@media (max-width: 1000px) {
+  .contato .container {
+    gap: 80px;
+  }
+  .contato .container::before {
+    width: 40px;
+    height: 10px;
+    top: -5px;
+  }
+  .contato .sub-texto {
+    padding: 0;
+  }
+  .email {
+    font-size: 1.5rem;
+  }
+  .direitos {
+    font-size: 1rem;
+  }
+}
+/* -------------------------------------------750 */
+@media (max-width: 750px) {
+  .contato .container {
+    gap: 60px 30px;
+  }
+  .contato .container::before {
+    left: initial;
+    right: 20px;
+  }
+  .contato .sub-texto {
+    font-size: 1.1rem;
+  }
+  .lista-email {
+    justify-self: right;
+  }
+  .email {
+    font-size: 1.1rem;
+  }
+  .direitos {
+    font-size: 0.7rem;
+  }
+}
+/* -------------------------------------------500 */
+@media (max-width: 600px) {
+  .contato .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contato .sub-texto {
+    max-width: 350px;
+    font-size: 1rem;
+  }
+  .lista-email {
+    justify-self: initial;
+  }
+  .email {
+    font-size: 1rem;
+  }
+  .direitos {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
+/* -------------------------------------------380 */
+@media (max-width: 380px) {
+  .contato .container {
+    gap: 30px;
+  }
+  .contato .sub-texto {
+    max-width: 250px;
+    font-size: 0.875rem;
+  }
+  .email {
+    font-size: 0.875rem;
+  }
+  .direitos {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+}
